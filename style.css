@@ -5,6 +5,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100vh;
 }
 
 .boxed {
@@ -27,6 +29,29 @@ body {
 .text-center {
     text-align: center;
 }
+
+.w40 {
+    width: 40%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w33 {
+    width: 33%;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.dark {
+    background: #2D2D2D;
+    color: #fff;
+    padding: 0 10%;
+}
+
 
 header {
     padding-block: 20px;
@@ -57,13 +82,13 @@ header {
 }
 
 .nav-menu a:hover {
-    background-color: lightsalmon;
-    border-radius: 15px;
+    background-color: #FF0080;
+    border-radius: 5px;
 }
 
 .slider {
     width: 100%;
-    height: 900px;
+    height: 80vh;
     aspect-ratio: 16/9;
     position: relative;
 }
@@ -79,6 +104,7 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%);
 }
 
 .slider-content h1 {
@@ -89,6 +115,58 @@ header {
 
 .slider-content p {
     font-size: 1.5rem;
+    color: #fff;
 }
+
+.section {
+    padding: 50px 0;
+}
+
+.section1 {
+    background: #2D2D2D;
+}
+
+.section p {
+    font-weight: 500;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.product {
+    background: #2D2D2D;
+    border-radius: 10px;
+    box-sizing: border-box;
+    filter: brightness(70%);
+    transition: 0.4s ease-in-out;
+}
+
+.product:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.product p {
+    color: #fff;
+    padding: 20px;
+}
+
+span {
+    font-weight: 600;
+    background: #FF0080;
+    color: #fff;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+
 
 
