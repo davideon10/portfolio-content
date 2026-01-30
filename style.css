@@ -142,6 +142,10 @@ header {
     margin-bottom: 20px;
 }
 
+.propos-mobile {
+    display: none;
+}
+
 .product {
     background: #2D2D2D;
     border-radius: 10px;
@@ -176,7 +180,7 @@ header {
 }
 
 .container {
-    max-width: 600px; 
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -184,11 +188,12 @@ header {
 .form-group {
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 
-input, textarea {
+input,
+textarea {
     padding: 12px;
     border: 1px solid #444;
     background: #2a2a2a;
@@ -209,10 +214,15 @@ input, textarea {
 }
 
 .btn-submit:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-@media(max-width:810px){
+footer {
+    background: lightcoral;
+    height: 100px;
+}
+
+@media(max-width:810px) {
     header {
         height: 70px;
     }
@@ -240,9 +250,9 @@ input, textarea {
     }
 
     .nav-menu a {
-        display: block;    
+        display: block;
         width: 100%;
-        padding: 10px 0;    
+        padding: 10px 0;
         text-align: center;
     }
 
@@ -277,12 +287,20 @@ input, textarea {
         text-align: center;
     }
 
+    .propos {
+        display: none;
+    }
+
+    .propos-mobile {
+        display: block;
+    }
+
     .slider {
         height: 60vh;
     }
 
     .column {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .wm100 {
@@ -297,8 +315,4 @@ input, textarea {
     .boxed {
         max-width: 90%;
     }
-    }
-
-
-
-
+}
