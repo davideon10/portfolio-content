@@ -1,27 +1,32 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Kikachtou</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="JS/app.js" defer></script>
+    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon"/>
   </head>
   <body>
     <header>
       <nav class="boxed flex space-between align-center">
-        <img src="IMG/logo.png" alt="" class="nav-logo align-center" />
+        <button onclick="openMenu()" class="nav-menu-mobile">
+          <span class="material-icons">
+            menu
+          </span>
+        </button>
+        <a href="">
+          <img src="IMG/logo.png" alt="" class="nav-logo align-center"/>
+        </a>
         <div>
           <ul class="nav-menu flex align-center">
-            <a href="">
-              <li>Accueil</li>
-            </a>
-            <a href="">
-              <li>Nos produits</li>
-            </a>
-            <a href="">
-              <li>Contact</li>
-            </a>
+              <li><a href="">Accueil</a></li>
+              <li><a href="#propos">À propos</a></li>
+              <li><a href="#produits">Nos produits</a></li>
+              <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -35,7 +40,7 @@
     </div>
     <div class="section section1">
       <div class="text-center dark">
-          <h2>Qui somme nous ?</h2>
+          <h2 id="propos">Qui somme nous ?</h2>
           <p>
             Tout a commencé par un constat simple : pourquoi la cosmétique
             devrait-elle toujours être compliquée, sérieuse et hors de prix ?
@@ -58,12 +63,12 @@
     </div>
     <div class="section">
       <div class="boxed text-center">
-        <h2>Nos produits</h2>
-        <div class="flex gap20">
-          <div class="w33 product">
+        <h2 id="produits">Nos produits</h2>
+        <div class="flex column gap20 wrap">
+          <div class="w32 wm100 product">
             <img src="IMG/mascara.png" alt=""/>
             <h3>
-                <span>Mascara Kikachtou :</span>
+                <span class="title">Mascara Kikachtou :</span>
             </h3>
             <p>
                 Le volume qui ne cache rien. Donnez du
@@ -74,9 +79,11 @@
             </p>
           </div>
 
-          <div class="w33 product">
+          <div class="w32 wm100 product">
             <img src="IMG/lèvre.png" alt=""/>
-            <span>Rouge à Lèvres Kikachtou :</span>
+            <h3>
+              <span class="title">Rouge à Lèvres Kikachtou :</span>
+            </h3>
             <p>
                La couleur qui fait parler d'elle.
               Habillez votre sourire d’un fini éclatant et d’une texture
@@ -87,9 +94,9 @@
             </p>
           </div>
 
-          <div class="w33 product">
+          <div class="w32 wm100 product">
             <img src="IMG/fard.png" alt=""/>
-            <h3><span>Palette Kikachtou :</span></h3>
+            <h3><span class="title">Palette Kikachtou :</span></h3>
             <p>
                Mixez, matchez, kiffez. Six teintes vibrantes
               et ultra-pigmentées pour créer tous les looks, du plus discret au
@@ -98,7 +105,60 @@
               vous et mettez de la couleur là où ça compte.
             </p>
           </div>
+
+          <div class="w32 wm100 product">
+            <img src="IMG/blush.jpg" alt=""/>
+            <h3><span class="title">Blush Kikachtou :</span></h3>
+            <p>
+               Le coup de blush qui en dit long. Illuminez votre teint d'un éclat frais et naturel avec notre blush ultra-pigmenté. Sa texture soyeuse s'estompe sans effort pour un effet bonne mine immédiat, comme après une journée au grand air. Un seul passage suffit pour réveiller votre visage et afficher votre meilleure mine.
+            </p>
+          </div>
+
+          <div class="w32 wm100 product">
+            <img src="IMG/teint.jpg" alt=""/>
+            <h3><span class="title">Fond de Teint Kikachtou :</span></h3>
+            <p>
+               La perfection naturelle, sans effort. Obtenez un teint unifié et unifié avec notre fond de teint léger qui se fond parfaitement à votre peau. Il camoufle les imperfections sans alourdir, pour un fini naturel qui dure toute la journée. Oubliez le masque, bonjour le teint frais et lumineux.
+            </p>
+          </div>
+
+          <div class="w32 wm100 product">
+            <img src="IMG/corecteur.jpg" alt=""/>
+            <h3><span class="title">Correcteur Kikachtou :</span></h3>
+            <p>
+               La baguette magique de votre teint. Adieu cernes et petites rougeurs ! Notre correcteur haute couvrance est votre allié secret pour un teint zéro défaut. Sa texture crémeuse s'applique facilement et reste invisible, effaçant instantanément les signes de fatigue. Le camouflage parfait, en un clin d'œil.
+            </p>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="section dark" id="contact">
+      <div class="boxed text-center">
+        <h2>Contactez-nous</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Envoyer</button>
+    </form>
+  </div>
       </div>
     </div>
   </body>

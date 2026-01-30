@@ -38,8 +38,8 @@ body {
     width: 60%;
 }
 
-.w33 {
-    width: 33%;
+.w32 {
+    width: 32%;
 }
 
 .gap20 {
@@ -50,6 +50,10 @@ body {
     background: #2D2D2D;
     color: #fff;
     padding: 0 10%;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 
@@ -72,6 +76,10 @@ header {
 
 .nav-menu {
     list-style-type: none;
+}
+
+.nav-menu-mobile {
+    display: none;
 }
 
 .nav-menu a {
@@ -159,13 +167,137 @@ header {
     padding: 20px;
 }
 
-span {
+.title {
     font-weight: 600;
     background: #FF0080;
     color: #fff;
     border-radius: 10px;
-    padding: 2px;
+    padding: 0 7px;
 }
+
+.container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    background: #2a2a2a;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.btn-submit {
+    background-color: #c71585;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05); 
+}
+
+@media(max-width:810px){
+    header {
+        height: 70px;
+    }
+
+    .nav-logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        color: #000;
+        background: lightcoral;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        padding: 0;
+    }
+
+    .nav-menu a {
+        display: block;    
+        width: 100%;
+        padding: 10px 0;    
+        text-align: center;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .nav-menu-mobile {
+        display: block;
+        border: 0px;
+        background-color: lightcoral;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+
+    .nav-menu-mobile-exit {
+        display: block;
+        border: 0px;
+        background-color: lightcoral;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .nav-menu a {
+        color: #000;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .slider {
+        height: 60vh;
+    }
+
+    .column {
+    flex-direction: column;
+    }
+
+    .wm100 {
+        width: 100%;
+    }
+
+    .product {
+        filter: brightness(100%);
+
+    }
+
+    .boxed {
+        max-width: 90%;
+    }
+    }
 
 
 
